@@ -64,3 +64,10 @@ def get_interval_note(grade: str, first_note: str) -> str:
            octave += 1
     # Only work for ascendent intervals       
     return second_note
+
+def get_time_signature() -> str:
+    '''
+       Get fraction that indicate
+       the kind of rhithm
+    '''
+    pass
