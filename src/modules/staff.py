@@ -70,4 +70,19 @@ def get_time_signature() -> str:
        Get fraction that indicate
        the kind of rhithm
     '''
-    pass
+    import random
+    # First select pulse four or eight in the floor
+    options: list[int] = [4, 8]
+    time: int = random.choice(options)
+    # Second Use Divitions valid for pulse time
+    if (time == 4):
+        # 3 Simple time signature & one Compound (Binary + Ternary)
+        options: list[int] = [2, 3, 4, 12]
+    else:
+        # Compound time signature (Ternary)
+        options: list[int] = [6, 9, 12]
+            
+    divitions: int = random.choice(options)
+    del options
+    # Give divitions over time in musical time signature format
+    return f'{divitions}\n{time}'
