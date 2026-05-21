@@ -92,10 +92,31 @@ def get_time_signature() -> str:
     return f'<div>{divitions}<br />{time}</div>'
 
 def get_restant_head() -> str:
-    pass
+    heads: list[str] =      [
+                                '../images/note_head_2_1.svg',
+                                '../images/note_head_4.svg'
+                            ]
+
+    import random
+    
+    head: str = random.choice(heads)
+
+    return head
 
 def get_restant_flag() -> str:
-    pass
+    options: list[str] =    [
+                                '/workspaces/waff/images/8_flag.svg',
+                                '/workspaces/waff/images/16_flag.svg',
+                                '/workspaces/waff/images/group_8.svg',
+                                '/workspaces/waff/images/group_16.svg'
+                            ]
+    
+    import random
+    
+    choosen: str = random.choice(options)
+    del options, random
+    
+    return choosen
 
 def get_restant_stem() -> str:
-    pass    
+    return '/workspaces/waff/images/stem.svg'    
