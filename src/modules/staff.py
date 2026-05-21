@@ -1,3 +1,7 @@
+# Define Global variables for use for get rhythm patterns image paths
+time: int = 4
+divitions: int = 4
+# Define Global Functions
 def get_note_text() -> str:
     '''
         Implement steps from 1 to 3
@@ -68,7 +72,7 @@ def get_interval_note(grade: str, first_note: str) -> str:
 def get_time_signature() -> str:
     '''
        Get fraction that indicate
-       the kind of rhithm
+       the kind of rhythm
     '''
     import random
     # First select pulse four or eight in the floor
@@ -86,3 +90,12 @@ def get_time_signature() -> str:
     del options
     # Give divitions over time in musical time signature web format
     return f'<div>{divitions}<br />{time}</div>'
+
+def get_restant_head() -> str:
+    pass
+
+def get_restant_flag() -> str:
+    pass
+
+def get_restant_stem() -> str:
+    pass    
