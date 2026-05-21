@@ -5,7 +5,7 @@ import os
 #################################################################################
 def make_empty_musical_staff() -> str:
 
-    render_web: str = '<style type = text/css>body {padding: 5em;} .flag {margin-top: -2.7em;} .stem {margin-top: -3em;} .heading {margin-top: -1em;}</style>'
+    render_web: str = '<style type = text/css>body {padding: 5em;} div {margin-left: -1.5em;} .flag {margin-top: -2.7em;} .stem {margin-top: -3em;} .heading {margin-top: -1em;}</style>'
 
     for staff_line in [5, 4, 3, 2, 1]:
         # Later Use After method with Javascript for add notes
@@ -23,7 +23,7 @@ def note_head() -> str:
     '''
         Give head
     '''
-    return '<p class = heading>O</p>'
+    return f'{staff.get_time_signature()}<p class = heading>O</p>'
 
 def stem() -> str:
     return '<p class = stem>|</p>'

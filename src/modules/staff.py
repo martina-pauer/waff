@@ -84,5 +84,5 @@ def get_time_signature() -> str:
             
     divitions: int = random.choice(options)
     del options
-    # Give divitions over time in musical time signature format
-    return f'{divitions}\n{time}'
+    # Give divitions over time in musical time signature web format
+    return f'<div>{divitions}<br />{time}</div>'
