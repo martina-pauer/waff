@@ -17,16 +17,16 @@ def flag() -> str:
     '''
         Give the note ceil ~
     '''
-    return f'<p class = flag><img src = {staff.get_restant_flag()} alt = FLAG></img></p>'
+    return f'<p class = flag><img src = \'{staff.get_restant_flag()}\' alt = FLAG /></p>'
 
 def note_head() -> str:
     '''
         Give head
     '''
-    return f'{staff.get_time_signature()}<p class = heading><img src = {staff.get_restant_head()} alt = HEAD></img></p>'
+    return f'{staff.get_time_signature()}<p class = heading><img src = \'{staff.get_restant_head()}\' alt = HEAD /></p>'
 
 def stem() -> str:
-    return f'<p class = stem><img src = {staff.get_restant_stem()} alt = STEM></img></p>'
+    return f'<p class = stem><img src = \'{staff.get_restant_stem()}\' alt = STEM /></p>'
 ################################################################################
 waff_app = Flask(__name__)
 @waff_app.route('/')

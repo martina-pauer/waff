@@ -1,6 +1,7 @@
 # Define Global variables for use for get rhythm patterns image paths
 time: int = 4
 divitions: int = 4
+prefix: str = 'https://github.com/martina-pauer/waff/raw/e07d16474810f6deb36066c7091ee308a0142f08/images/'
 # Define Global Functions
 def get_note_text() -> str:
     '''
@@ -93,8 +94,8 @@ def get_time_signature() -> str:
 
 def get_restant_head() -> str:
     heads: list[str] =      [
-                                '../images/note_head_2_1.svg',
-                                '../images/note_head_4.svg'
+                                f'{prefix}note_head_2_1.svg',
+                                f'{prefix}note_head_4.svg'
                             ]
 
     import random
@@ -105,10 +106,10 @@ def get_restant_head() -> str:
 
 def get_restant_flag() -> str:
     options: list[str] =    [
-                                '/workspaces/waff/images/8_flag.svg',
-                                '/workspaces/waff/images/16_flag.svg',
-                                '/workspaces/waff/images/group_8.svg',
-                                '/workspaces/waff/images/group_16.svg'
+                                f'{prefix}8_flag.svg',
+                                f'{prefix}16_flag.svg',
+                                f'{prefix}group_8.svg',
+                                f'{prefix}group_16.svg'
                             ]
     
     import random
@@ -119,4 +120,4 @@ def get_restant_flag() -> str:
     return choosen
 
 def get_restant_stem() -> str:
-    return '/workspaces/waff/images/stem.svg'    
+    return f'{prefix}stem.svg'    
