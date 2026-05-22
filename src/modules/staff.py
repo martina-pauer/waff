@@ -109,12 +109,14 @@ def get_restant_head() -> str:
     import random
     
     head: str = random.choice(heads)
-
+    # Fix Mistakes of ryhthm space
+    if (head.__contains__('2') and (restant_time_16['note'] <= 2)):
+        head = f'{prefix}note_head_4.svg'
     # Discount time used in 16 note unit
-    if head.__contains__('4'):
+    if (head.__contains__('4') and (restant_time_16['note'] >= 4)):
         # Each 4 note decrease four 16 note
         restant_time_16['note'] -= 4
-    else:
+    elif (restant_time_16['note'] >= 8):
         # Each 2 note decrease eight 16 note
         restant_time_16['note'] -= 8
         
@@ -131,18 +133,21 @@ def get_restant_flag() -> str:
     import random
     
     choosen: str = random.choice(options)
+    # Select options that fit in time
+    if ((choosen.__contains__('8')) and (restant_time_16['note'] < 4)):
+        choosen = options[1]    
     del options, random
     
-    if choosen == '8_flag.svg':
+    if ((choosen == '8_flag.svg') and (restant_time_16['note'] >= 2)):
         # Discount two 16 notes
         restant_time_16['note'] -= 2
-    elif choosen == '16_flag.svg':
+    elif ((choosen == '16_flag.svg') and (restant_time_16['note'] >= 1)):
         # each 16 note decrease one 16 note
         restant_time_16['note'] -= 1    
-    elif choosen == 'group_8.svg':
+    elif ((choosen == 'group_8.svg') and (restant_time_16['note'] >= 4)):
         # two 8 notes decrease four 16 notes
         restant_time_16['note'] -= 4
-    else:
+    elif (restant_time_16['note'] >= 2):
         # each two 16 notes decrease 2 16 notes
         restant_time_16['note'] -= 2       
         
