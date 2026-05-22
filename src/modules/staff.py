@@ -1,8 +1,7 @@
-# Define Global variables for use for get rhythm patterns image paths
+# Define variables for use for get rhythm patterns image paths
 time: int = 4
 divitions: int = 4
-# How Much 16 note fit in the divitions each time (each four note has four 16 note)
-restant_time_16_note = divitions * 4
+restant_time_16: dict[str, int] = {'note': divitions * 4}
 prefix: str = 'https://github.com/martina-pauer/waff/raw/e07d16474810f6deb36066c7091ee308a0142f08/images/'
 # Define Global Functions
 def get_note_text() -> str:
@@ -89,15 +88,15 @@ def get_time_signature() -> str:
         # Compound time signature (Ternary)
         options: list[int] = [6, 9, 12]
             
-    divitions: int = random.choice(options)
+    divs: int = random.choice(options)
     del options
     # When get divitions get pattern duration in 16 note
     if (time == 8):
         # each 8 note time divition has two 16 notes
-        restant_time_16_note = divitions * 2
+        restant_time_16['note'] = divitions * 2
     else:
         # each 4 note has four 16 notes
-        restant_time_16_note = divitions * 4    
+        restant_time_16['note'] = divs * 4    
     # Give divitions over time in musical time signature web format
     return f'<div>{divitions}<br />{time}</div>'
 
@@ -112,13 +111,12 @@ def get_restant_head() -> str:
     head: str = random.choice(heads)
 
     # Discount time used in 16 note unit
-
     if head.__contains__('4'):
         # Each 4 note decrease four 16 note
-        restant_time_16_note -= 4
+        restant_time_16['note'] -= 4
     else:
         # Each 2 note decrease eight 16 note
-        restant_time_16_note -= 8
+        restant_time_16['note'] -= 8
         
     return head
 
@@ -137,16 +135,16 @@ def get_restant_flag() -> str:
     
     if choosen == '8_flag.svg':
         # Discount two 16 notes
-        restant_time_16_note -= 2
+        restant_time_16['note'] -= 2
     elif choosen == '16_flag.svg':
         # each 16 note decrease one 16 note
-        restant_time_16_note -= 1    
+        restant_time_16['note'] -= 1    
     elif choosen == 'group_8.svg':
         # two 8 notes decrease four 16 notes
-        restant_time_16_note -= 4
+        restant_time_16['note'] -= 4
     else:
         # each two 16 notes decrease 2 16 notes
-        restant_time_16_note -= 2       
+        restant_time_16['note'] -= 2       
         
     return choosen
 
