@@ -135,6 +135,19 @@ def get_restant_flag() -> str:
     choosen: str = random.choice(options)
     del options, random
     
+    if choosen == '8_flag.svg':
+        # Discount two 16 notes
+        restant_time_16_note -= 2
+    elif choosen == '16_flag.svg':
+        # each 16 note decrease one 16 note
+        restant_time_16_note -= 1    
+    elif choosen == 'group_8.svg':
+        # two 8 notes decrease four 16 notes
+        restant_time_16_note -= 4
+    else:
+        # each two 16 notes decrease 2 16 notes
+        restant_time_16_note -= 2       
+        
     return choosen
 
 def get_restant_stem() -> str:
