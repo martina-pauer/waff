@@ -120,4 +120,4 @@ def get_restant_flag() -> str:
     return choosen
 
 def get_restant_stem() -> str:
-    return f'{prefix}stem.svg'    
+    return f'{prefix}stem.svg'
