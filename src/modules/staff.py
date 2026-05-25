@@ -155,3 +155,18 @@ def get_restant_flag() -> str:
 
 def get_restant_stem() -> str:
     return f'{prefix}stem.svg'
+
+def get_key() -> str:
+    '''
+        Give the random musical
+        key signatur
+    '''
+    import random
+
+    sigantures: list[str] = [
+                                f'{prefix}C-third_line-key.svg',
+                                f'{prefix}F-fourth_line-key.svg',
+                                f'{prefix}G-second_line-key.svg'
+                            ]
+
+    return random.choice(sigantures)

@@ -7,7 +7,7 @@ def make_empty_musical_staff() -> str:
 
     render_web: str = '<style type = text/css>body {padding: 5em;} img {float: top; position: absolute; top: 3em; width: 6em; height: 6em;} div {margin-left: -1.5em;} .flag {margin-top: -2.7em; margin-right: 1em;} .stem {margin-top: -3em;} .heading {margin-top: -1em;}</style>'
 
-    render_web += f'{staff.get_time_signature()}'
+    render_web += f'{staff.get_time_signature()}{key()}'
     
     for staff_line in [5, 4, 3, 2, 1]:
         # Later Use After method with Javascript for add notes
@@ -15,6 +15,8 @@ def make_empty_musical_staff() -> str:
         
     return render_web
 
+def key():
+    return f'<img src = \'{staff.get_key()}\'/>'
 def flag() -> str:
     '''
         Give the note ceil ~
