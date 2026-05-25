@@ -2,7 +2,7 @@
 time: int = 4
 divitions: int = 4
 restant_time_16: dict[str, int] = {'note': divitions * 4}
-prefix: str = 'https://github.com/martina-pauer/waff/raw/27827994d4a89333bb77497a431abdea626ef48d/'
+prefix: str = 'https://github.com/martina-pauer/waff/raw/d7ee2cdbc37fd6b65935c274e2450f4008fb9bbf/'
 # Define Global Functions
 def get_note_text() -> str:
     '''
