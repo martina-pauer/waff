@@ -7,7 +7,7 @@ def make_empty_musical_staff() -> str:
 
     render_web: str = '<style type = text/css>body {padding: 5em;} img {float: top; position: absolute; top: 3em; width: 6em; height: 6em;} div {margin-left: -1.5em;} .flag {margin-top: -2.7em; margin-right: 1em;} .stem {margin-top: -3em;} .heading {margin-top: -1em;}</style>'
 
-    render_web += f'{staff.get_time_signature()}{key()}'
+    render_web += f'{staff.get_time_signature()}<span class = key>{key()}</span>'
     
     for staff_line in [5, 4, 3, 2, 1]:
         # Later Use After method with Javascript for add notes
@@ -32,8 +32,10 @@ def note_head() -> str:
 def stem() -> str:
     stems: str = ''
     
-    for pattern in range(0, 4):
+    for sign in range(0, staff.divitions + 1):
         stems += f'<span class = stem><img src = \'{staff.get_restant_stem()}\'/></span>'
+        if staff.restant_time_16['note'] == 0:
+            break
 
     return stems
 

@@ -2,7 +2,7 @@
 time: int = 4
 divitions: int = 4
 restant_time_16: dict[str, int] = {'note': divitions * 4}
-prefix: str = 'https://github.com/martina-pauer/waff/raw/e07d16474810f6deb36066c7091ee308a0142f08/images/'
+prefix: str = 'https://github.com/martina-pauer/waff/raw/bc9bd026d502f54e89c03dbbc1d4032911862341/images/'
 # Define Global Functions
 def get_note_text() -> str:
     '''
@@ -135,10 +135,9 @@ def get_restant_flag() -> str:
     choosen: str = random.choice(options)
     # Select options that fit in time
     if ((choosen.__contains__('8')) and (restant_time_16['note'] < 4)):
-        choosen = options[1]    
-    del options, random
-    
-    if ((choosen == '8_flag.svg') and (restant_time_16['note'] >= 2)):
+        choosen = options[0]    
+        del options, random
+    elif ((choosen == '8_flag.svg') and (restant_time_16['note'] >= 2)):
         # Discount two 16 notes
         restant_time_16['note'] -= 2
     elif ((choosen == '16_flag.svg') and (restant_time_16['note'] >= 1)):
@@ -148,8 +147,8 @@ def get_restant_flag() -> str:
         # two 8 notes decrease four 16 notes
         restant_time_16['note'] -= 4
     elif (restant_time_16['note'] >= 2):
-        # each two 16 notes decrease 2 16 notes
-        restant_time_16['note'] -= 2       
+        # each two 16 notes decrease four 16 notes
+        restant_time_16['note'] -= 4       
         
     return choosen
 
