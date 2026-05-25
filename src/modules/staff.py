@@ -2,7 +2,7 @@
 time: int = 4
 divitions: int = 4
 restant_time_16: dict[str, int] = {'note': divitions * 4}
-prefix: str = 'https://github.com/martina-pauer/waff/raw/bc9bd026d502f54e89c03dbbc1d4032911862341/images/'
+prefix: str = 'https://github.com/martina-pauer/waff/raw/27827994d4a89333bb77497a431abdea626ef48d/'
 # Define Global Functions
 def get_note_text() -> str:
     '''
@@ -102,8 +102,8 @@ def get_time_signature() -> str:
 
 def get_restant_head() -> str:
     heads: list[str] =      [
-                                f'{prefix}note_head_2_1.svg',
-                                f'{prefix}note_head_4.svg'
+                                f'{prefix}images/note_head_2_1.svg',
+                                f'{prefix}images/note_head_4.svg'
                             ]
 
     import random
@@ -111,7 +111,7 @@ def get_restant_head() -> str:
     head: str = random.choice(heads)
     # Fix Mistakes of ryhthm space
     if (head.__contains__('2') and (restant_time_16['note'] <= 2)):
-        head = f'{prefix}note_head_4.svg'
+        head = f'{prefix}images/note_head_4.svg'
     # Discount time used in 16 note unit
     if (head.__contains__('4') and (restant_time_16['note'] >= 4)):
         # Each 4 note decrease four 16 note
@@ -124,10 +124,10 @@ def get_restant_head() -> str:
 
 def get_restant_flag() -> str:
     options: list[str] =    [
-                                f'{prefix}8_flag.svg',
-                                f'{prefix}16_flag.svg',
-                                f'{prefix}group_8.svg',
-                                f'{prefix}group_16.svg'
+                                f'{prefix}images/8_flag.svg',
+                                f'{prefix}images/16_flag.svg',
+                                f'{prefix}images/group_8.svg',
+                                f'{prefix}images/group_16.svg'
                             ]
     
     import random
@@ -153,7 +153,7 @@ def get_restant_flag() -> str:
     return choosen
 
 def get_restant_stem() -> str:
-    return f'{prefix}stem.svg'
+    return f'{prefix}images/stem.svg'
 
 def get_key() -> str:
     '''
@@ -163,9 +163,9 @@ def get_key() -> str:
     import random
 
     sigantures: list[str] = [
-                                f'{prefix}C-third_line-key.svg',
-                                f'{prefix}F-fourth_line-key.svg',
-                                f'{prefix}G-second_line-key.svg'
+                                f'{prefix}images/C-third_line-key.svg',
+                                f'{prefix}images/F-fourth_line-key.svg',
+                                f'{prefix}images/G-second_line-key.svg'
                             ]
 
     return random.choice(sigantures)
