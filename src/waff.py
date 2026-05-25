@@ -3,9 +3,21 @@ from flask import Flask
 from modules import staff
 import os
 #################################################################################
+def get_text(file_path: str) -> str:
+    '''
+        Get text from file complete path
+    '''
+    content: str = ''
+    
+    with open(file_path, 'r') as text:
+        for line in text.readlines():
+            content += line
+
+    return content
+
 def make_empty_musical_staff() -> str:
 
-    render_web: str = '<link rel = \'stylesheet\' type = text-plain href = \'' + staff.prefix + 'src/fixing.css\'/><style type = text/css>body {padding: 5em;} img {float: top; position: absolute; top: 3em; width: 6em; height: 6em;} div {margin-left: -1.5em;} .flag {margin-top: -2.7em; margin-right: 1em;} .stem {margin-top: -3em;} .heading {margin-top: -1em;}</style>'
+    render_web: str = '<style type = text/css>' + get_text('fixing.css').replace('\n', '') + '</style>'
 
     render_web += f'<span class = secondLine>{staff.get_time_signature()}</span><span class = key>{key()}</span>'
     
