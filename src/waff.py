@@ -5,9 +5,9 @@ import os
 #################################################################################
 def make_empty_musical_staff() -> str:
 
-    render_web: str = '<style type = text/css>body {padding: 5em;} img {float: top; position: absolute; top: 3em; width: 6em; height: 6em;} div {margin-left: -1.5em;} .flag {margin-top: -2.7em; margin-right: 1em;} .stem {margin-top: -3em;} .heading {margin-top: -1em;}</style>'
+    render_web: str = '<link rel = \'stylesheet\' href = \'' + staff.prefix + 'fixing.css\'/><style type = text/css>body {padding: 5em;} img {float: top; position: absolute; top: 3em; width: 6em; height: 6em;} div {margin-left: -1.5em;} .flag {margin-top: -2.7em; margin-right: 1em;} .stem {margin-top: -3em;} .heading {margin-top: -1em;}</style>'
 
-    render_web += f'{staff.get_time_signature()}<span class = key>{key()}</span>'
+    render_web += f'<span class = secondLine>{staff.get_time_signature()}</span><span class = key>{key()}</span>'
     
     for staff_line in [5, 4, 3, 2, 1]:
         # Later Use After method with Javascript for add notes
