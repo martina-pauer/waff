@@ -16,6 +16,13 @@ div
 {
     margin-left: -1.5em;
 } 
+/* Rhythm Positions */
+
+.flag > *, .stem > *, .heading > *
+{
+    margin: 2em;
+    margin-left: 12em;
+}
 
 .flag 
 {

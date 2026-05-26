@@ -2,7 +2,7 @@
 time: int = 4
 divitions: int = 4
 restant_time_16: dict[str, int] = {'note': divitions * 4}
-prefix: str = 'https://github.com/martina-pauer/waff/raw/dd9ea7879db24a52ea121996936deda48a987b64/'
+prefix: str = 'https://github.com/martina-pauer/waff/raw/423737a01826e397e6607b6f2a67a21b2932639d/'
 # Define Global Functions
 def get_note_text() -> str:
     '''
@@ -127,7 +127,7 @@ def get_restant_flag() -> str:
                                 f'{prefix}images/8_flag.svg',
                                 f'{prefix}images/16_flag.svg',
                                 f'{prefix}images/group_8.svg',
-                                f'{prefix}images/group_16.svg'
+                                f'{prefix}images/group_16.svg',
                                 f'{prefix}images/without_flag.svg'
                             ]
     
@@ -136,15 +136,19 @@ def get_restant_flag() -> str:
     choosen: str = random.choice(options)
     # Select options that fit in time
     if ((choosen.__contains__('8')) and (restant_time_16['note'] < 4)):
-        choosen = options[0]    
+        choosen = options[0] 
+        restant_time_16['note'] -= 2   
         del options, random
-    elif ((choosen == '8_flag.svg') and (restant_time_16['note'] >= 2)):
+    elif ((choosen == options[4]) and (restant_time_16['note'] >= 4)):
+        # Discount four 16 notes (one time)
+        restant_time_16['note'] -= 4    
+    elif ((choosen == options[0]) and (restant_time_16['note'] >= 2)):
         # Discount two 16 notes
         restant_time_16['note'] -= 2
-    elif ((choosen == '16_flag.svg') and (restant_time_16['note'] >= 1)):
+    elif ((choosen == options[1]) and (restant_time_16['note'] >= 1)):
         # each 16 note decrease one 16 note
         restant_time_16['note'] -= 1    
-    elif ((choosen == 'group_8.svg') and (restant_time_16['note'] >= 4)):
+    elif ((choosen == options[2]) and (restant_time_16['note'] >= 4)):
         # two 8 notes decrease four 16 notes
         restant_time_16['note'] -= 4
     elif (restant_time_16['note'] >= 2):
