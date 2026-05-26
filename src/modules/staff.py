@@ -128,6 +128,7 @@ def get_restant_flag() -> str:
                                 f'{prefix}images/16_flag.svg',
                                 f'{prefix}images/group_8.svg',
                                 f'{prefix}images/group_16.svg'
+                                f'{prefix}images/without_flag.svg'
                             ]
     
     import random
