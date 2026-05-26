@@ -19,7 +19,8 @@ def make_empty_musical_staff() -> str:
 
     render_web: str = '<style type = text/css>' + get_text('fixing.css').replace('\n', '') + '</style>'
 
-    render_web += f'<span class = secondLine>{staff.get_time_signature()}</span><span class = key>{key()}</span>'
+    key_text: str = key()
+    render_web += f'<span class = {key_text.partition('s/')[2][0]}-key>{key_text}</span><span class = \'lines secondLine\'>{staff.get_time_signature()}</span>'
     
     for staff_line in [5, 4, 3, 2, 1]:
         # Later Use After method with Javascript for add notes

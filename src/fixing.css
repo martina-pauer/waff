@@ -32,10 +32,38 @@ div
 {
     margin-top: -1em;
 }
+/* Positioning for notes and signatures */
+.G-key, .F-key, .C-key {    margin: 6.5em;  }
 
-.secondLine
+.G-key
+{
+
+}
+
+.F-key
+{
+}
+
+.C-key
+{
+}
+
+.lines 
 {
     position: absolute;
-    top: 6.3em;
     float: top;
 }
+/* The Space between lines and spaces doubles */
+.firstDownSpace {   top: 8.35em;    }
+/* Staff 5 lines for the key: from E4 to F5 */
+.firstLine  {   top: 8.00em;    }
+.secondLine {   top: 7.30em;    }
+.thirdLine  {   top: 6.70em;   }
+.fourthLine {   top: 6.15.em;   }
+.fiveLine   {   top: 5.50em;   }
+/* Until D6 for G key */
+.firstUpperSpace    {   top: 5.15em;  }
+.secondUpperSpace   {   top: 5.00em;  }
+.thirdUpperSpace    {   top: 4.75em;  }
+.fourthUpperSpace   {   top: 4.33em;  }
+.fivethUpperSpace   {   top: 3.97em; }
