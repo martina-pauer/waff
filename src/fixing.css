@@ -8,8 +8,8 @@ img
     float: top; 
     position: absolute; 
     top: 3em; 
-    width: 6em; 
-    height: 6em;
+    width: 5em; 
+    height: 5em;
 } 
 
 div 
@@ -33,20 +33,13 @@ div
     margin-top: -1em;
 }
 /* Positioning for notes and signatures */
-.G-key, .F-key, .C-key {    margin: 6.5em;  }
+.G-key, .F-key, .C-key {    position: relative; margin: 6.5em;  }
 
-.G-key
-{
+.G-key {    top: -2.25em;   }
 
-}
+.F-key {    top: -3.50em;   }
 
-.F-key
-{
-}
-
-.C-key
-{
-}
+.C-key {    top: -2.90em;   }
 
 .lines 
 {
