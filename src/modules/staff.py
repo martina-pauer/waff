@@ -52,7 +52,7 @@ def get_interval_note(grade: str, first_note: str) -> str:
     # Save the pitch for modify
     octave: int = int(first_note[1])
     
-    for note in range(natural_notes.index(first_note[0]), natural_notes + 1):
+    for note in range(natural_notes.index(first_note[0]), natural_notes.__len__() + 1):
          # Use next note until get the note after all semitones
          second_note = natural_notes[note]
          # Discount notes, when get zero restart for loop
@@ -62,7 +62,7 @@ def get_interval_note(grade: str, first_note: str) -> str:
          elif ['C', 'D', 'F', 'G', 'A'].__contains__(natural_notes[note]):
              semitones = f'{int(semitones[0]) - 2}st'
          elif second_note == 'E':
-             semitones = f'{int(semitones[0] - 1)}st'
+             semitones = f'{int(semitones[0]) - 1}st'
          else:
            # Restart loop
            note = natural_notes.index(first_note[0])
