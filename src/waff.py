@@ -2,6 +2,8 @@
 from flask import Flask
 from modules import staff
 import os
+
+note: str = staff.get_interval_note('VJ', 'D3')
 #################################################################################
 def get_text(file_path: str) -> str:
     '''
@@ -34,19 +36,19 @@ def flag() -> str:
     '''
         Give the note ceil ~
     '''
-    return f'<span class = flag><img src = \'{staff.get_restant_flag()}\'/></span>'
+    return f'<span class = \'flag-{note}-note\' flag><img src = \'{staff.get_restant_flag()}\'/></span>'
 
 def note_head() -> str:
     '''
         Give head
     '''
-    return f'<span class = heading>\t<img src = \'{staff.get_restant_head()}\'/></span>'
+    return f'<span class = \'head-{note}-note heading\'>\t<img src = \'{staff.get_restant_head()}\'/></span>'
 
 def stem() -> str:
     stems: str = ''
     
     for sign in range(0, staff.divitions + 1):
-        stems += f'<span class = stem><img src = \'{staff.get_restant_stem()}\'/></span>'
+        stems += f'<span class = \'stem-{note}-note stem\'><img src = \'{staff.get_restant_stem()}\'/></span>'
         if staff.restant_time_16['note'] == 0:
             break
 
