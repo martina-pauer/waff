@@ -4,7 +4,6 @@ from modules import staff
 import os
 
 note: str = staff.get_interval_note('VJ', 'D4')
-print(note)
 #################################################################################
 def get_text(file_path: str) -> str:
     '''

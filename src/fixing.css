@@ -39,271 +39,337 @@ div
 {
     margin-top: -1em;
 }
-
+/* Positioning For Each Note */
 .flag-D3-note
 {
+    all: inherit;
 }
 
 .head-D3-note
 {
+    all: inherit;
 }
 
 .stem-D3-note
 {
+    all: inherit;
 }
 
 .flag-E3-note
 {
+    all: inherit;
 }
 
 .head-E3-note 
 {
+    all: inherit;
 }
 
 .stem-E3-note 
 {
+    all: inherit;
 }
 
 .flag-F3-note
 {
+    all: inherit;
 }
 
 .head-F3-note 
 {
+    all: inherit;
 }
 
 .stem-F3-note 
 {
+    all: inherit;
 }
 
 .flag-G3-note
 {
+    all: inherit;
 }
 
 .head-G3-note 
 {
+    all: inherit;
 }
 
 .stem-G3-note 
 {
+    all: inherit;
 }
 
 .flag-A3-note
 {
+    all: inherit;
 }
 
 .head-A3-note 
 {
+    all: inherit;
 }
 
 .stem-A3-note 
 {
+    all: inherit;
 }
 
 
 .flag-B3-note
 {
+    all: inherit;
 }
 
 .head-B3-note 
 {
+    all: inherit;
 }
 
 .stem-B3-note 
 {
+    all: inherit;
 }
 
 .flag-C4-note
 {
+    all: inherit;
 }
 
 .head-C4-note 
 {
+    all: inherit;
 }
 
 .stem-C4-note 
 {
+    all: inherit;
 }
 
 .flag-D4-note
 {
+    all: inherit;
 }
 
 .head-D4-note 
 {
+    all: inherit;
 }
 
 .stem-D4-note 
 {
+    all: inherit;
 }
 
 .flag-E4-note
 {
+    all: inherit;
 }
 
 .head-E4-note 
 {
+    all: inherit;
 }
 
 .stem-E4-note 
 {
+    all: inherit;
 }
 
 .flag-F4-note
 {
+    all: inherit;
 }
 
 .head-F4-note 
 {
+    all: inherit;
 }
 
 .stem-F4-note 
 {
+    all: inherit;
 }
 
 .flag-G4-note
 {
+    all: inherit;
 }
 
 .head-G4-note 
 {
+    all: inherit;
 }
 
 .stem-G4-note 
 {
+    all: inherit;
 }
 
 .flag-A4-note
 {
+    all: inherit;
 }
 
 .head-A4-note 
 {
+    all: inherit;
 }
 
 .stem-A4-note 
 {
+    all: inherit;
 }
 
 flag-B4-note
 {
+    all: inherit;
 }
 
 .head-B4-note 
 {
+    all: inherit;
 }
 
 .stem-B4-note 
 {
+    all: inherit;
 }
 
 flag-C5-note
 {
+    all: inherit;
 }
 
 .head-C5-note 
 {
+    all: inherit;
 }
 
 .stem-C5-note 
 {
+    all: inherit;
 }
 
 
 flag-D5-note
 {
+    all: inherit;
 }
 
 .head-D5-note 
 {
+    all: inherit;
 }
 
 .stem-D5-note 
 {
+    all: inherit;
 }
 
 flag-E5-note
 {
+    all: inherit;
 }
 
 .head-E5-note 
 {
+    all: inherit;
 }
 
 .stem-E5-note 
 {
+    all: inherit;
 }
 
 flag-F5-note
 {
+    all: inherit;
 }
 
 .head-F5-note 
 {
+    all: inherit;
 }
 
 .stem-F5-note 
 {
+    all: inherit;
 }
 
 flag-G5-note
 {
+    all: inherit;
 }
 
 .head-G5-note 
 {
+    all: inherit;
 }
 
 .stem-G5-note 
 {
+    all: inherit;
 }
 
 flag-A5-note
 {
+    all: inherit;
 }
 
 .head-A5-note 
 {
+    all: inherit;
 }
 
 .stem-A5-note 
 {
+    all: inherit;
 }
 
 flag-B5-note
 {
+    all: inherit;
 }
 
 .head-B5-note 
 {
+    all: inherit;
 }
 
 .stem-B5-note 
 {
+    all: inherit;
 }
 
 flag-C6-note
 {
+    all: inherit;
 }
 
 .head-C6-note 
 {
+    all: inherit;
 }
 
 .stem-C6-note 
 {
+    all: inherit;
 }
 
 .flag-D6-note
 {
+    all: inherit;
 }
 
 .head-D6-note 
 {
+    all: inherit;
 }
 
 .stem-D6-note 
 {
+    all: inherit;
 }
 /* Positioning for notes and signatures */
 .G-key, .F-key, .C-key {    position: relative; margin: 6.5em;  }
