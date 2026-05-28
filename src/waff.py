@@ -36,7 +36,7 @@ def flag() -> str:
     '''
         Give the note ceil ~
     '''
-    return f'<span class = \'flag-{note}-note\' flag><img src = \'{staff.get_restant_flag()}\'/></span>'
+    return f'<span class = \'flag-{note}-note flag\'><img src = \'{staff.get_restant_flag()}\'/></span>'
 
 def note_head() -> str:
     '''
